@@ -4,5 +4,6 @@
 window.TRADERSPROP_API_BASE = "https://traderspropdarajampesaintegration.vercel.app";
 window.TRADERSPROP_SUPABASE_URL = "https://bcfzfentnhjdsjsfbbzf.supabase.co";
 window.TRADERSPROP_SUPABASE_ANON_KEY = "sb_publishable_qTG7KWG8cTzwuofplO2DAQ_e80wRwxA";
-// Route confirmation links through the v0 Supabase proxy so preview sessions are preserved.
-window.TRADERSPROP_SUPABASE_REDIRECT_URL = "https://v0.app/chat/api/supabase/redirect/MJO08DTm8hL";
+// Leave empty so Supabase confirmation links return to the deployed TradersProp site.
+// The app supplies the current site origin at runtime.
+window.TRADERSPROP_SUPABASE_REDIRECT_URL = "";
