@@ -1011,14 +1011,9 @@ async function submitAuth(e,mode){
         m.textContent='Account created successfully.';
         go(localStorage.getItem('tp_challenge_intent')==='1'?'pricing':'dashboard');
       }else{
-        // Supabase returns no session when email confirmation is enabled. Try the
-        // normal password login so the same UI works when confirmation is disabled.
-        const retry=await sb.auth.signInWithPassword({email,password:pass});
-        if(retry.error)throw retry.error;
-        if(!retry.data?.session?.user)throw new Error('Account created, but Supabase did not return an authenticated session.');
-        tpSyncSupabaseUser(retry.data.session.user);
-        m.textContent='Account created successfully.';
-        go(localStorage.getItem('tp_challenge_intent')==='1'?'pricing':'dashboard');
+        // With email confirmation enabled, Supabase intentionally returns no session.
+        // Do not retry with the password before the user confirms the email.
+        m.textContent='Account created. Check your email to confirm your account, then log in.';
       }
       return;
     }
