@@ -460,15 +460,13 @@ body:has(.tpDepositPage) .tpPayList{border-top:1px solid #d4dce7;padding-top:26p
 body:has(.tpDepositPage) .tpPayAction{margin-top:22px}.tpPayAction .btn{height:85px;background:#2079ed;border:0;border-radius:22px;font-size:27px}.tpPaymentSecurity,.tpImportant,.tpTrusted,.tpDepositMsg,.tpChallengeCard .fee,.tpChallengeCard .panel{display:none}
 body:has(.tpDepositPage) .tpPaymentCard:after{content:'or continue with\\A\\A  ▣  Cards\\A\\A  M-PESA\\A\\A  A  Airtel Money\\A\\A\\A PESAPAL_NOTIFICATION_ID is not configured. Register the public IPN URL with Pesapal first.';white-space:pre-wrap;display:block;border-top:1px solid #d4dce7;margin-top:26px;padding:18px 10px 0;text-align:center;color:#73819c;font-size:18px;line-height:1.8}
 @media(max-width:720px){body:has(.tpDepositPage) .nav{height:166px}body:has(.tpDepositPage) .brand span{font-size:28px}body:has(.tpDepositPage) .mark{width:118px;height:118px}body:has(.tpDepositPage) .tpDepositPage{padding:47px 0 32px}body:has(.tpDepositPage) .tpChallengeCard{padding:37px 25px 24px;border-radius:43px 43px 0 0}body:has(.tpDepositPage) .tpChallengeContent h2:before{font-size:40px}body:has(.tpDepositPage) .tpPaymentCard{margin:0 25px;padding:30px 25px 34px}.tpPayRow{grid-template-columns:44px 86px 1fr;padding:18px 15px}.tpPayCopy b{font-size:21px}.tpPayCopy small{font-size:16px}.tpPayAction .btn{font-size:22px;height:78px}}
-<style>
-body:has(.tpDepositPage) .tpPaymentCard{background:#f1f5fb!important;color:#131b2b!important}
+  body:has(.tpDepositPage) .tpPaymentCard{background:#f1f5fb!important;color:#131b2b!important}
 body:has(.tpDepositPage) .tpPaymentHead h2,body:has(.tpDepositPage) .tpPaymentHead p{color:transparent!important;height:32px;overflow:hidden}
 body:has(.tpDepositPage) .tpPaymentHead h2:before{color:#687793!important}body:has(.tpDepositPage) .tpPaymentHead p:before{color:#8794af!important}
 body:has(.tpDepositPage) .tpPayRow{border-color:#4384f6!important;background:#fff!important}body:has(.tpDepositPage) .tpPayAction .btn{background:#2079ed!important;color:#fff!important;box-shadow:0 12px 25px rgba(32,121,237,.25)!important}
 body:has(.tpDepositPage) .tpPaymentCard:after{content:'or continue with';font-size:18px;white-space:normal;line-height:1.4}
 body:has(.tpDepositPage) .tpPaymentCard:before{content:'▣  Cards     M-PESA     A  Airtel Money';display:block;white-space:pre-wrap;text-align:center;color:#687793;font-size:18px;line-height:3;border-top:1px solid #d4dce7;margin-top:18px;padding-top:12px}
-<style>
-body:has(.tpDepositPage) .tpPayRow{grid-template-columns:52px 102px 1fr;min-height:112px}
+  body:has(.tpDepositPage) .tpPayRow{grid-template-columns:52px 102px 1fr;min-height:112px}
 body:has(.tpDepositPage) .googleBrand{font-size:0!important;color:#4285f4!important}.googleBrand:before{content:'G ';font-size:30px;color:#4285f4}.googleBrand:after{content:'Pay';font-size:30px;color:#30343b}
 body:has(.tpDepositPage) .tpPayAction .btn{font-weight:850}
 body:has(.tpDepositPage) .tpAlternateLabel{display:flex;align-items:center;gap:16px;margin:27px 0 23px;color:#8794af;font-weight:800;font-size:18px}.tpAlternateLabel:before,.tpAlternateLabel:after{content:'';height:1px;background:#d4dce7;flex:1}
@@ -476,6 +474,21 @@ body:has(.tpDepositPage) .tpAlternateMethods{display:flex;flex-direction:column;
 body:has(.tpDepositPage) .tpPaymentError{margin:25px 0 0;text-align:center;color:#6f7f9c;font-size:17px}
 body:has(.tpDepositPage) .tpPaymentSecurity{display:flex!important;flex-direction:column;margin:26px 0 0;border:1px solid #18362e;border-radius:32px;overflow:hidden;background:rgba(3,19,16,.55)}.tpSecurityItem{display:flex;align-items:center;gap:17px;padding:24px 25px;color:#eef6f1}.tpSecurityItem+.tpSecurityItem{border-top:1px solid #18362e}.tpSecurityIcon{display:grid;place-items:center;width:56px;height:56px;border-radius:15px;background:#092c0d;color:#69e24a;font-weight:900;font-size:25px}.tpSecurityItem b,.tpSecurityItem span{display:block}.tpSecurityItem span{color:#9eb1a8;margin-top:7px}.tpImportant{display:block!important;margin:24px 0 0;padding:27px;border:1px solid #327f19;border-radius:30px;background:linear-gradient(135deg,#102d18,#0a2813);color:#d0ded5}.tpImportant h3{color:#6be83f;font-size:24px;margin:0 0 10px}.tpImportant p{margin:0;line-height:1.6}.tpTrusted,.tpDepositMsg{display:none!important}
 @media(max-width:720px){body:has(.tpDepositPage) .tpPaymentCard{margin:0 25px;padding:30px 25px 34px}.tpPayRow{grid-template-columns:44px 86px 1fr;min-height:112px}.tpAltRow{min-height:90px;padding:16px}.tpSecurityItem{padding:22px 25px}.tpImportant{padding:25px}.tpPaymentError{font-size:16px}}
+/* Final Google Pay checkout alignment */
+body:has(.tpDepositPage){overflow-x:hidden}
+body:has(.tpDepositPage) .nav .container{min-width:760px}
+body:has(.tpDepositPage) .brand{flex-shrink:0}
+body:has(.tpDepositPage) .tpPaymentCard:before,
+body:has(.tpDepositPage) .tpPaymentCard:after{content:none!important;display:none!important}
+body:has(.tpDepositPage) .tpPaymentHead{border-bottom:1px solid #d4dce7;padding-bottom:25px}
+body:has(.tpDepositPage) .tpPayList{border-top:0!important;padding-top:0!important}
+body:has(.tpDepositPage) .tpPaymentError{margin:25px 7px 0;line-height:1.55}
+@media(max-width:720px){
+  body:has(.tpDepositPage) .nav .container{width:760px;margin-left:25px;margin-right:0}
+  body:has(.tpDepositPage) .tpDepositPage{padding-top:47px}
+  body:has(.tpDepositPage) .tpChallengeCard{padding-left:25px;padding-right:25px}
+  body:has(.tpDepositPage) .tpPaymentCard{margin-left:25px;margin-right:25px}
+}
 </style></head>
 <body>
 <div id="app"></div>
@@ -1049,7 +1062,7 @@ function deposit(){
       <div class="tpPayAction visible"><button id="pesapalPayButton" class="btn primary full" onclick="startPesapalChallengeCheckout()">Continue with Google Pay</button></div>
       <div class="tpAlternateLabel"><span>or continue with</span></div>
       <div class="tpAlternateMethods"><button class="tpAltRow active"><span class="tpAltIcon cards">▣</span><span><b>Cards</b><small>Visa / Mastercard</small></span></button><button class="tpAltRow"><span class="tpAltIcon mpesa">M</span><span><b>M-PESA</b><small>Mobile money</small></span></button><button class="tpAltRow"><span class="tpAltIcon airtel">A</span><span><b>Airtel Money</b><small>Mobile money</small></span></button></div>
-      <p class="tpPaymentError">Pesapal authentication failed.</p>
+      <p class="tpPaymentError">PESAPAL_NOTIFICATION_ID is not configured. Register the public IPN URL with Pesapal first.</p>
       <div class="tpPaymentSecurity"><div class="tpSecurityItem"><div class="tpSecurityIcon">SSL</div><div><b>SSL Secured</b><span>Encrypted checkout</span></div></div><div class="tpSecurityItem"><div class="tpSecurityIcon">🔒</div><div><b>Payment Provider</b><span>Payment details stay with PesaPal</span></div></div><div class="tpSecurityItem"><div class="tpSecurityIcon">✓</div><div><b>Verified Payments</b><span>Confirmed server-side</span></div></div></div>
       <div class="tpImportant"><div class="tpImportantIcon">✓</div><div><h3>Important:</h3><p>Your challenge is activated only after the TradersProp server receives and verifies the PesaPal transaction status. Do not rely on the browser callback alone.</p></div></div>
       <div class="tpTrusted">🛡️ &nbsp; Secure PesaPal Checkout</div><p id="depositMsg" class="tpDepositMsg">PesaPal is the payment method for challenge purchases.</p>
