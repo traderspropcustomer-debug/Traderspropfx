@@ -965,7 +965,9 @@ async function startPesapalCheckout({productType,amount,currency='USD',descripti
   if(btn){btn.disabled=true;btn.textContent='Opening PesaPal…';}
   if(msg)msg.textContent='Creating your secure PesaPal payment…';
   try{
-    const payload={productType,amount:Number(amount),currency,description,metadata};
+    const account=user();
+    if(!account?.email)throw new Error('Please sign in before starting a PesaPal payment.');
+    const payload={productType,amount:Number(amount),currency,description,clientId:account.email,customer:{email:account.email,name:account.name||account.kycFullName||''},metadata:{...metadata,clientId:account.email}};
     const r=await tpFetch('/v1/payments/pesapal/checkout',{method:'POST',headers:{'Content-Type':'application/json','Idempotency-Key':(window.crypto?.randomUUID?.()||('pp-'+Date.now()+'-'+Math.random()))},body:JSON.stringify(payload)});
     const url=r?.redirectUrl||r?.redirect_url||r?.checkoutUrl||r?.url;
     if(url){window.location.href=url;return;}
